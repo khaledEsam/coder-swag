@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		2978B8441F8397F100ABB19B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978B8431F8397F100ABB19B /* AppDelegate.swift */; };
-		2978B8461F8397F100ABB19B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978B8451F8397F100ABB19B /* ViewController.swift */; };
+		2978B8461F8397F100ABB19B /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978B8451F8397F100ABB19B /* CategoriesVC.swift */; };
 		2978B8491F8397F100ABB19B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2978B8471F8397F100ABB19B /* Main.storyboard */; };
 		2978B84B1F8397F100ABB19B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2978B84A1F8397F100ABB19B /* Assets.xcassets */; };
 		2978B84E1F8397F100ABB19B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2978B84C1F8397F100ABB19B /* LaunchScreen.storyboard */; };
+		2978B8591F839FF300ABB19B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978B8581F839FF300ABB19B /* CategoryCell.swift */; };
+		2978B85B1F83A3F500ABB19B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978B85A1F83A3F500ABB19B /* Category.swift */; };
+		2978B85E1F83A64D00ABB19B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978B85D1F83A64D00ABB19B /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2978B8401F8397F100ABB19B /* CoderSwag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoderSwag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2978B8431F8397F100ABB19B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2978B8451F8397F100ABB19B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2978B8451F8397F100ABB19B /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 		2978B8481F8397F100ABB19B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2978B84A1F8397F100ABB19B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2978B84D1F8397F100ABB19B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2978B84F1F8397F100ABB19B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2978B8581F839FF300ABB19B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		2978B85A1F83A3F500ABB19B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2978B85D1F83A64D00ABB19B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		2978B8421F8397F100ABB19B /* CoderSwag */ = {
 			isa = PBXGroup;
 			children = (
-				2978B8431F8397F100ABB19B /* AppDelegate.swift */,
-				2978B8451F8397F100ABB19B /* ViewController.swift */,
+				2978B85C1F83A62900ABB19B /* Services */,
+				2978B8571F839F4000ABB19B /* Controller */,
+				2978B8561F839F3600ABB19B /* View */,
+				2978B8551F839F2D00ABB19B /* Model */,
 				2978B8471F8397F100ABB19B /* Main.storyboard */,
 				2978B84A1F8397F100ABB19B /* Assets.xcassets */,
 				2978B84C1F8397F100ABB19B /* LaunchScreen.storyboard */,
 				2978B84F1F8397F100ABB19B /* Info.plist */,
 			);
 			path = CoderSwag;
+			sourceTree = "<group>";
+		};
+		2978B8551F839F2D00ABB19B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2978B8431F8397F100ABB19B /* AppDelegate.swift */,
+				2978B85A1F83A3F500ABB19B /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2978B8561F839F3600ABB19B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2978B8581F839FF300ABB19B /* CategoryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2978B8571F839F4000ABB19B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2978B8451F8397F100ABB19B /* CategoriesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2978B85C1F83A62900ABB19B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2978B85D1F83A64D00ABB19B /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +177,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2978B8461F8397F100ABB19B /* ViewController.swift in Sources */,
+				2978B8461F8397F100ABB19B /* CategoriesVC.swift in Sources */,
 				2978B8441F8397F100ABB19B /* AppDelegate.swift in Sources */,
+				2978B8591F839FF300ABB19B /* CategoryCell.swift in Sources */,
+				2978B85B1F83A3F500ABB19B /* Category.swift in Sources */,
+				2978B85E1F83A64D00ABB19B /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N65V7KL7W6;
 				INFOPLIST_FILE = CoderSwag/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KhaledEsam.CoderSwag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N65V7KL7W6;
 				INFOPLIST_FILE = CoderSwag/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KhaledEsam.CoderSwag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
